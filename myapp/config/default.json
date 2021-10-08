@@ -1,0 +1,17 @@
+{
+	"dbconfig": {
+		"url": "mongodb://localhost:27017/recycle"
+	},
+	"jwt": {
+		"expiration": 10000,
+		"secretKey": "virtual beings"
+	},
+	"environment": "dev",
+	"serverDomain": "http://localhost:3000",
+	"payment": {
+        "hostname": "securegw-stage.paytm.in",
+        "port": "443",
+        "path": "/theia/api/v1/initiateTransaction?mid=MID_HERE&orderId=",
+        "method": "POST"
+    }
+}
