@@ -51,7 +51,7 @@ const initateTransaction = async function(req, res) {
 
 	paytmParams.body = {
 	    "requestType"   : "Payment",
-	    "mid"           : "SKLANi73687573808064",
+	    "mid"           : "MID_HERE",
 	    "websiteName"   : "WEBSTAGING",
 	    "orderId"       : order_id,
 	    "callbackUrl"   : "https://merchant.com/callback",
@@ -68,7 +68,7 @@ const initateTransaction = async function(req, res) {
 	* Generate checksum by parameters we have in body
 	* Find your Merchant Key in your Paytm Dashboard at https://dashboard.paytm.com/next/apikeys 
 	*/
-	[err, checksum] = await to(PaytmChecksum.generateSignature(JSON.stringify(paytmParams.body), "rpfmvN@Ce1N_E2o1"));
+	[err, checksum] = await to(PaytmChecksum.generateSignature(JSON.stringify(paytmParams.body), "MERCHANT_KEY"));
 	if(err) {
 		console.log("Error initiating transaction");
 		return;
@@ -141,7 +141,7 @@ const validateTransaction = async function(req, res) {
 	res.setHeader("Content-Type", "application/json");
 
 	const received_data = req.body;
-	let customerInfo, mid="SKLANi73687573808064";
+	let customerInfo, mid="MID_HERE";
 
 	// ORDERID
 	[err, customerInfo] = await to(User_Payment_Info.findById(received_data["ORDERID"]));
@@ -190,7 +190,7 @@ const validateTransaction = async function(req, res) {
 	* Verify checksum
 	* Find your Merchant Key in your Paytm Dashboard at https://dashboard.paytm.com/next/apikeys 
 	*/
-	var isValidChecksum = checksum_lib.verifychecksum(paytmParams, "rpfmvN@Ce1N_E2o1", paytmChecksum);
+	var isValidChecksum = checksum_lib.verifychecksum(paytmParams, "MERCHANT_KEY", paytmChecksum);
 	if(isValidChecksum) {
 		console.log("Checksum Matched");
 	} else {
@@ -202,7 +202,7 @@ const validateTransaction = async function(req, res) {
 	paytmParams.body = {
 
 		/* Find your MID in your Paytm Dashboard at https://dashboard.paytm.com/next/apikeys */
-		"mid" : "SKLANi73687573808064",
+		"mid" : "MID_HERE",
 
 		/* Enter your order id which needs to be check status for */
 		"orderId" : received_data.orderId,
@@ -212,7 +212,7 @@ const validateTransaction = async function(req, res) {
 	* Generate checksum by parameters we have in body
 	* Find your Merchant Key in your Paytm Dashboard at https://dashboard.paytm.com/next/apikeys 
 	*/
-	[err, checksum] = await to(PaytmChecksum.generateSignature(JSON.stringify(paytmParams.body), "rpfmvN@Ce1N_E2o1"));
+	[err, checksum] = await to(PaytmChecksum.generateSignature(JSON.stringify(paytmParams.body), "MERCHANT_KEY"));
 	if(err) {
 		console.log("Error initiating transaction");
 		return;

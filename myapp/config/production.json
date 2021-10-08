@@ -1,13 +1,12 @@
 {
     "dbConfig":{
-        "dbName":"webportal",
+        "dbName":"recycle",
         "username":"admin",
-        "password":"bhatura11",
-        "host":"database-1.cubhhmf333bi.us-east-2.rds.amazonaws.com"
+        "password":"admin123"
     },
     "jwt":{
         "expiration":10000,
-        "secretKey":"i am the best"
+        "secretKey":"project recycle"
     },
-    "environment":"production"
+    "environment":"development"
 }
