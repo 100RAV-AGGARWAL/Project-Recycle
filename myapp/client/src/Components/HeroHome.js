@@ -1,10 +1,17 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-class HeroHome extends Component {
-  render() {
-    return (
-      <section id="hero" class="d-flex align-items-center">
+function HeroHome() {
+  const history = useHistory();
+
+  const routeChange = () =>{ 
+    let path = `/:login`; 
+    history.push(path);
+  }
+  return (
+    <section id="hero" class="d-flex align-items-center">
         <div
           class="container d-flex flex-column align-items-center"
           data-aos="zoom-in"
@@ -12,15 +19,15 @@ class HeroHome extends Component {
         >
           <h1>Project Recycle</h1>
           <h2></h2>
-          <a href="about.html" class="btn-login">
+          <a href="about.html" class="btn-login" onClick={routeChange}>
             Login
           </a>
-          <a href="about.html" class="btn-login">
+          <a href="about.html" class="btn-login" onClick={routeChange}>
             Sign Up
           </a>
         </div>
       </section>
-    );
-  }
+  )
+
 }
 export default HeroHome;
