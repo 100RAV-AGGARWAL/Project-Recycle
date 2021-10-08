@@ -1125,3 +1125,56 @@ section {
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
 }
+
+.loginPage {
+  position: relative; 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.loginPage::before {    
+    content: "";
+    background-image: url('../img/sandra-ahn-mode-HvGda_FvkCI-unsplash.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.25;
+}
+
+/* Our Team */
+
+.ourTeam {
+  position: relative; 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.ourTeam::before {    
+    content: "";
+    background-image: url('../img/sandra-ahn-mode-HvGda_FvkCI-unsplash.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.25;
+}
+
+.teamMembers{
+  margin:100px 40px;
+  position: relative;
+  color:#111;  
+  font-size: 2rem;
+  line-height: 0.9;
+  text-align: center;
+}
+
+.teamMember{
+  padding: 20px;
+}

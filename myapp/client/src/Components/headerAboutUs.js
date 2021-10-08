@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { useHistory } from "react-router-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function Header() {
+function HeaderAboutUs() {
   const history = useHistory();
 
   const routeChange = () =>{ 
-    let path = `/ourTeam`; 
+    let path = `/`; 
     history.push(path);
   }
   return (
@@ -18,8 +18,8 @@ function Header() {
 
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
-                <li><a class="active">Home</a></li>
-                <li><a onClick = {routeChange}>Our Team</a></li>
+                <li><a  onClick = {routeChange}>Home</a></li>
+                <li><a class = "active">Our Team</a></li>
               </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -28,4 +28,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderAboutUs;

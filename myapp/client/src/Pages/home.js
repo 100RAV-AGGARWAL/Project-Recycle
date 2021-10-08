@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import Header from "../Components/header";
-import Footer from "../Components/footer";
 import HeroHome from "../Components/HeroHome";
 
 function home() {
@@ -9,7 +8,6 @@ function home() {
     <div>
       <Header />
       <HeroHome />
-      <Footer />
     </div>
   );
 }
