@@ -20,11 +20,11 @@ function HeroHome() {
           <h1>Project Recycle</h1>
           <h2></h2>
           <a class="btn-login" onClick={routeChange}>
-            Login
+            Login/Sign Up
           </a>
-          <a class="btn-login" onClick={routeChange}>
+          {/* <a class="btn-login" onClick={routeChange}>
             Sign Up
-          </a>
+          </a> */}
         </div>
       </section>
   )

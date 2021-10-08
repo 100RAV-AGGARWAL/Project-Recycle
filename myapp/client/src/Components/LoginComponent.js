@@ -20,7 +20,9 @@ function LoginComponent() {
   }, []);
 
   return (<>
-        <div className = "login-container">
+        <div className = "login-container" style={{ 
+      backgroundImage: `../../public/assets/img/arnaud-mesureur-7EqQ1s3wIAI-unsplash.jpg` 
+    }}>
         <div
           id="sawo-container"
           style={{ height: "300px", width: "300px" }}
