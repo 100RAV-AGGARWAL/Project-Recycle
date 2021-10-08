@@ -1,0 +1,13 @@
+{
+    "dbConfig":{
+        "dbName":"webportal",
+        "username":"admin",
+        "password":"bhatura11",
+        "host":"database-1.cubhhmf333bi.us-east-2.rds.amazonaws.com"
+    },
+    "jwt":{
+        "expiration":10000,
+        "secretKey":"i am the best"
+    },
+    "environment":"production"
+}

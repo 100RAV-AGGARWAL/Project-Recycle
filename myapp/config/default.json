@@ -1,0 +1,11 @@
+{
+	"dbconfig": {
+		"url": "mongodb://localhost:27017/webportal"
+	},
+	"jwt": {
+		"expiration": 10000,
+		"secretKey": "virtual beings"
+	},
+	"environment": "dev",
+	"serverDomain": "http://localhost:3000"
+}
