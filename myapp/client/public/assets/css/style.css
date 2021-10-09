@@ -1197,7 +1197,6 @@ section {
   padding: 12px 40px;
   border-radius: 50px;
   transition: 0.5s;
-  margin-top: 30px;
   color: #fff;
   background: #34b7a7;
 
@@ -1211,5 +1210,9 @@ section {
 
 .login-text{
   margin-bottom: 20px;
+  color: #fff;
+}
+
+.login-success{
   color: #fff;
 }
