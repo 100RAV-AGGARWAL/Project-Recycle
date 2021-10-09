@@ -1135,14 +1135,13 @@ section {
 
 .loginPage::before {    
     content: "";
-    background-image: url('../img/sandra-ahn-mode-HvGda_FvkCI-unsplash.jpg');
+    background-image: url('../img/jason-leem-50bzI1F6urA-unsplash.jpg');
     background-size: cover;
     position: absolute;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.25;
 }
 
 /* Our Team */
@@ -1154,9 +1153,9 @@ section {
   display: flex;
 }
 
-.ourTeam::before {    
+.ourTeam::before {
+  background-image: url('../img/sandra-ahn-mode-HvGda_FvkCI-unsplash.jpg');
     content: "";
-    background-image: url('../img/sandra-ahn-mode-HvGda_FvkCI-unsplash.jpg');
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -1177,4 +1176,40 @@ section {
 
 .teamMember{
   padding: 20px;
+}
+
+.dashboard{
+  margin: 20px auto;
+  position: relative;
+  color:#111;  
+  font-size: 2rem;
+  line-height: 0.9;
+
+}
+
+.code-btn{
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-top: 30px;
+  color: #fff;
+  background: #34b7a7;
+
+}
+
+.email{
+  font-size: 1.2rem;
+  color: #000;
+  
+}
+
+.login-text{
+  margin-bottom: 20px;
+  color: #fff;
 }
