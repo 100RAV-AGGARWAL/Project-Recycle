@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 
 const BulkCode = mongoose.model('BulkCode', new mongoose.Schema({
     tokenrequire : {type: Number},
-    token :{type : String},
+    token :{type : Array},
 	expiredat: { type: Date },
-    // takenById: { type: mongoose.ObjectId, ref: 'User', allowNull: false }
+    emailId: { type: String }
 }, { timestamps: true }));
 
 module.exports = BulkCode;
