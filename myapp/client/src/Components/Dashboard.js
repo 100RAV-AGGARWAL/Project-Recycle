@@ -12,9 +12,14 @@ const Dashboard = (props) => {
   }
 
   const handleSubmit = (event) => {
+    setCodeGenerated(true);
     event.preventDefault();
     console.log(inputs);
   }
+
+  const [codeGenerated, setCodeGenerated] = useState(false);
+
+  if(!codeGenerated){
 
   return (
     <div className="dashboard d-flex align-items-center">
@@ -46,5 +51,14 @@ const Dashboard = (props) => {
         </div>
     </div>
   );
-};
+}
+else{
+  return(
+    <>
+    </>
+  )
+    
+  
+}
+}
 export default Dashboard;
