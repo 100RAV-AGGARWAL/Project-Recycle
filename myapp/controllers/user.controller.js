@@ -8,7 +8,7 @@ const create = async function(req, res){
 
     let err, user;
 
-    [err, user] = await to(authService.createUser(body));
+    [err, user] = await to(User.create(body));
     if(err) return ReE(res, err, 422);
     return ReS(res, {message:'Successfully created new user.', user:user.toObject()}, 201);
 }
@@ -30,10 +30,6 @@ const getPublicInfo = async function(userId){
         throw err;
     }
     return {
-        id:user._id,
-        _id:user._id,
-        first: user.first,
-        last:user.last,
         email: user.email
    }
     

@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-// router.post('/users', UserController.create); //create   
+router.post('/createUser', UserController.create); //create   
 // router.get('/users', UserController.get);  //read
 // router.post('/users/login', UserController.login);
 router.post('/token/create', BulkCodeController.create);
